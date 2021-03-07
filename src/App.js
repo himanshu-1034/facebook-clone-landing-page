@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import './App.css';
+import { useStateValue } from './contextProvider';
 import Feed from './Feed';
 import Header from './header';
 import Login from './Login';
@@ -9,8 +10,8 @@ import Widgets from './Widgets';
 
 
 function App() {
-
-  const user=null;
+  const [{user},dispatch] = useStateValue();
+  
 
   return (
     <div className="app">
